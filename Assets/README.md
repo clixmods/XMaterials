@@ -1,18 +1,19 @@
-﻿# XMaterial - Extend material properties
-XMaterial permet d'étendre les assets material avec des propriétés supplémentaire.
+﻿# WORK IN PROGRESS #
+
+# XMaterial - Extend material properties
+XMaterial allows you to extend material assets with additional properties.
 # Create XMaterial
-Pour créer votre XMaterial, il suffit de selectionner le material que vous souhaitez étendre et de
-cliquer sur le bouton "Generate XMaterial properties".
+To create your XMaterial, simply select the material you want to extend and click the "Generate XMaterial properties" button.
 ## Use XMaterial properties
-Pour utiliser les nouvelles propriétés provenant de XMaterial, il suffit d'executer la méthode suivante
+To use the new properties from XMaterial, execute the following method:
 
     Material material;
-    if(material.GetXMaterialProperties(out XMaterial xmaterial))
+    if(material.TryGetXMaterialProperties(out XMaterial xmaterial))
     {
         var myProperty = xmaterial.YourPropertyName;
     }
 ## Add XMaterial properties
-Pour ajouter des propriétés supplémentaires, ouvrez le fichier **XMaterial.cs** et ajoutez y vos propriétés :
+To add additional properties, open the XMaterial.cs file and add your properties:
 
     public partial class XMaterial
     {
@@ -21,7 +22,7 @@ Pour ajouter des propriétés supplémentaires, ouvrez le fichier **XMaterial.cs
         public string GlossRange;
         public string Usage;
     }
-Ensuite dans votre code, vous y aurez accès comme ceux-ci :
+Then, in your code, you can access them like this:
     
     // Example with SurfaceType
     Material material;
